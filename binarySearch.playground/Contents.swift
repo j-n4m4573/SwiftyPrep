@@ -34,9 +34,33 @@ func binarySearch(_ array: [Int], _ key: Int) -> Bool {
     return false
 }
 
-binarySearch(numbers, 2)
+func binarySearchRecursive(_ array: [Int], _ item: Int, min: Int = 0, max : Int = 1) -> Bool {
+        let mid = Int((min + max) / 2)
+    
+        if min >= max {
+            return false
+        }
+    
+        if array[mid] == item {
+            return true
+        }
+    
+        if array[mid] > item {
+            print("more than")
+            return binarySearchRecursive(array, item, max: mid - 1)
+        }
+    
+        if array[mid] < item {
+            print("less than")
+            return binarySearchRecursive(array, item, min: mid + 1)
+        }
+    
+    print("\(item) is not the array")
+    print("array item: \(array[mid])")
+    return false
+}
 
-
+binarySearchRecursive(numbers, 9)
 
 
 
