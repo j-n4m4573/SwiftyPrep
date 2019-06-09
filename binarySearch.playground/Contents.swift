@@ -60,7 +60,9 @@ func binarySearchRecursive(_ array: [Int], _ item: Int, min: Int = 0, max : Int 
     return false
 }
 
-binarySearchRecursive(numbers, 9)
+binarySearchRecursive(numbers, 11)
+
+
 
 
 
