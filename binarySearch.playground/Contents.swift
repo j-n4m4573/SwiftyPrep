@@ -3,6 +3,9 @@ import UIKit
 
 let numbers = [1,4,7,9,11,24,27,32,43]
 
+var min = 0
+var max = numbers.count - 1
+
 func binarySearch(_ array: [Int], _ key: Int) -> Bool {
     
     var minIndex = 0
@@ -12,11 +15,11 @@ func binarySearch(_ array: [Int], _ key: Int) -> Bool {
         
         let midIndex = Int((minIndex + maxIndex)/2)
 
-        if minIndex >= maxIndex {
+        if minIndex > maxIndex {
             return false
         }
         
-        if array[midIndex] == key {
+        if key == array[midIndex] {
             print("key: \(key), item: \(array[midIndex])")
             return true
         }
@@ -34,36 +37,49 @@ func binarySearch(_ array: [Int], _ key: Int) -> Bool {
     return false
 }
 
-func binarySearchRecursive(_ array: [Int], _ item: Int, min: Int = 0, max : Int = 1) -> Bool {
-        let mid = Int((min + max) / 2)
+func binarySearchRecursive(_ array: [Int], _ key: Int, min: inout Int, max: inout Int) -> Bool {
     
-        if min >= max {
+        if array.count == 0 {return false}
+        print(min)
+        // if this is the first iteration then
+//        var min = 0
+//        var max = array.count - 1
+    
+        if key < array[min] || key > array[max] {
+            print("item is is not in the array")
             return false
         }
-    
-        if array[mid] == item {
-            return true
-        }
-    
-        if array[mid] > item {
-            print("more than")
-            return binarySearchRecursive(array, item, max: mid - 1)
-        }
-    
-        if array[mid] < item {
-            print("less than")
-            return binarySearchRecursive(array, item, min: mid + 1)
-        }
-    
-    print("\(item) is not the array")
-    print("array item: \(array[mid])")
-    return false
-}
+        
+            let mid = Int((min + max) / 2)
+            print(mid)
+        
+            if min > max {
+                return false
+            }
+        
+            if array[mid] == key {
+                return true
+            }
+        
+            if key > array[mid] {
+                print("key is greater than the item")
+                min = mid + 1
+                return binarySearchRecursive(array, key, min: &min, max: &max)
+            }
+        
+            if key < array[mid] {
+                print("key is less than the item")
+                max = mid - 1
+                return binarySearchRecursive(array, key, min: &min, max: &max)
+            }
+        
+        print("\(key) is not the array")
+        print("array item: \(array[mid])")
+        return false
+    }
 
-binarySearchRecursive(numbers, 11)
-
-
-
+binarySearchRecursive(numbers, 1, min: &min, max: &max)
+    //binarySearch(numbers, 11)
 
 
 
