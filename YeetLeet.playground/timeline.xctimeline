@@ -3,7 +3,17 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/JGibbs/dev/SwiftyPrep/YeetLeet.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=597&amp;EndingColumnNumber=0&amp;EndingLineNumber=28&amp;StartingColumnNumber=0&amp;StartingLineNumber=27&amp;Timestamp=582149924.251773"
+         documentLocation = "file:///Users/JGibbs/dev/SwiftyPrep/YeetLeet.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=898&amp;EndingColumnNumber=0&amp;EndingLineNumber=32&amp;StartingColumnNumber=0&amp;StartingLineNumber=31&amp;Timestamp=582929171.76823"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/JGibbs/dev/SwiftyPrep/YeetLeet.playground#CharacterRangeLen=199&amp;CharacterRangeLoc=636&amp;EndingColumnNumber=0&amp;EndingLineNumber=26&amp;StartingColumnNumber=0&amp;StartingLineNumber=20&amp;Timestamp=582929171.768392"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/JGibbs/dev/SwiftyPrep/YeetLeet.playground#CharacterRangeLen=199&amp;CharacterRangeLoc=636&amp;EndingColumnNumber=0&amp;EndingLineNumber=26&amp;StartingColumnNumber=0&amp;StartingLineNumber=20&amp;Timestamp=582929171.768519"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
