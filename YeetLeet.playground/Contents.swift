@@ -14,19 +14,49 @@ import UIKit
 
 */
 
-func removeDuplicates(_ nums: inout [Int], _ value: Int = 2 ) -> Int {
+func removeElement(_ nums: inout [Int], _ value: Int = 2 ) -> Int {
         
     for (index,_) in nums.enumerated().reversed() {
- 
+        
             if index == 0 {break}
 
                 if nums[index] == value {
-                    print("this is the value\(nums[index])")
+                    print("this is the value \(nums[index])")
                     nums.remove(at: index)
                 }
         }
-        print(nums)
         return nums.count
     }
 
-removeDuplicates(&nums)
+removeElement(&nums)
+/*
+ Restate the problem: We're given a sorted array and we want to remove the duplicates in this array and return the count after we remove the duplicates.
+ Clarifying questions: Are the numbers only Ints? Will the numbers contain floats or doubles? will the numbers contain negative numbers?
+ Assumptions: Sorted array, all positive integers, return type is Int, count of array
+ Process: Loop through the array and check to see if
+*/
+var newNums = [1,1]
+
+func removeDuplicates(_ nums: inout [Int]) -> Int {
+    
+    for (index,value) in nums.enumerated().reversed() {
+        
+        if index == 0 {break}
+
+        if nums[index - 1] == value {
+            print("deleting num \(nums[index])")
+            nums.remove(at: index)
+        }
+        
+        if nums.count == 1 {break}
+    }
+    return nums.count
+}
+
+removeDuplicates(&newNums)
+
+func removeDuplicatesWithSet(_ nums: inout [Int]) -> Int {
+    return Array(Set(nums.sorted())).count
+}
+
+removeDuplicatesWithSet(&nums)
